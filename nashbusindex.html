@@ -1,311 +1,184 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>LutskAuto - Каталог автобусів</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dieller — Каталог автобусів</title>
 
-<!-- ПРАВИЛЬНЕ ПІДКЛЮЧЕННЯ АДАПТИВУ -->
-<link rel="stylesheet" href="nbus.css">
-
-<style>
-/* ============================== */
-/* ВСІ ТВОЇ СТИЛІ ЯК У ФАЙЛІ       */
-/* НІЧОГО НЕ МІНЯЮ                */
-/* ============================== */
-
-/* Reset & base */
-* {
-  margin: 0; padding: 0; box-sizing: border-box;
-}
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #fff;
-  color: #2c3e50;
-  line-height: 1.6;
-}
-a {
-  color: inherit; text-decoration: none;
-}
-img {
-  max-width: 100%; display: block;
-}
-
-/* Header */
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 18px 40px;
-  background: #fff;
-  box-shadow: 0 2px 8px rgb(0 0 0 / 07);
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-.logo {
-  font-weight: 700;
-  font-size: 1.8rem;
-  color: #ff7f00;
-}
-
-/* Hero Section */
-.hero {
-  position: relative;
-  background: url('hero-bus.jpg') center center/cover no-repeat;
-  height: 480px;
-  color: #fff;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0 20px;
-}
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0,0,0,0.5);
-  z-index: 0;
-}
-.hero-content {
-  position: relative;
-  z-index: 1;
-  max-width: 700px;
-  margin: 0 auto;
-}
-.hero h1 {
-  font-size: 3.4rem;
-  font-weight: 900;
-  margin-bottom: 12px;
-}
-.hero h1 strong {
-  color: #ff7f00;
-}
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 28px;
-  line-height: 1.4;
-}
-.hero .phones {
-  font-size: 1rem;
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-
-/* Catalog */
-.bus-catalog {
-  max-width: 1200px;
-  margin: 60px auto 80px;
-  padding: 0 20px;
-}
-.bus-catalog h2 {
-  text-align: center;
-  color: #ff7f00;
-  font-size: 2.8rem;
-  margin-bottom: 40px;
-}
-.bus-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
-  gap: 30px;
-}
-.bus-card {
-  background-color: #fff;
-  border-radius: 14px;
-  box-shadow: 0 8px 18px rgba(0,0,0,0.1);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Red strip */
-.top-strip {
-  width: 100%;
-  height: 8px;
-  background: #d80000;
-}
-
-/* Banner */
-.banner {
-  position: relative;
-  width: 100%;
-  height: 260px;
-  background: url('img/5285488700261338656.jpg') center/cover no-repeat;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-end;
-  padding: 20px 40px;
-}
-.banner::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.45);
-}
-.banner .menu {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  gap: 22px;
-}
-.banner .menu a {
-  background: rgba(255,127,0,0.85);
-  padding: 8px 18px;
-  color: #fff;
-  font-weight: 700;
-  border-radius: 20px;
-}
-
-/* How we work */
-.how-we-work {
-  max-width: 1100px;
-  margin: 60px auto;
-  padding: 0 20px;
-  text-align: center;
-}
-
-/* Why Choose Us */
-.why-choose-us {
-  position: relative;
-  background: url('footer-bg.jpg') center/cover no-repeat;
-  color: #fff;
-  padding: 80px 20px 100px;
-}
-.why-choose-us::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.7);
-}
-
-/* END OF YOUR ORIGINAL CSS */
-</style>
-
+  <!-- Підключення стилів -->
+  <link rel="stylesheet" href="nbus.css">
 </head>
 <body>
 
-<!-- Червона смуга -->
-<div class="top-strip"></div>
+  <!-- TOP STRIP -->
+  <div class="top-strip" aria-hidden="true"></div>
 
-<!-- Банер -->
-<div class="banner">
-    <div class="menu">
-        <a href="index.html">Головний екран</a>
-        <a href="kvitokindex.html">Замовити квиток</a>
-        <a href="registerindex.html">Реєстрація / Вхід</a>
-    </div>
-</div>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-content">
-    <h1><strong>Dieller</strong> Bus</h1>
-    <p>Пасажирські перевезення по Україні та Польщі:<br>вирішуємо будь-які ЗАМОВЛЕННЯ!</p>
-    <p>Телефонуйте сьогодні:</p>
-
-    <div class="phones">
-      <span>Vodafone :) 050-176-30-30</span>
-    </div>
-
-    <a href="#catalog" class="catalog-link">Каталог автобусів</a>
-  </div>
-</section>
-
-<!-- Catalog -->
-<section id="catalog" class="bus-catalog">
-  <h2>Каталог автобусів</h2>
-
-  <div class="bus-list">
-
-    <a href="mercedes2.html" class="bus-card">
-      <img src="img/mercedes.jpg">
-      <div class="bus-info">
-        <h3>Mercedes O404</h3>
-        <h5>темно-синій</h5>
-      </div>
-    </a>
-
-    <a href="Neoplanred.html" class="bus-card">
-      <img src="img/5269672762366693910.jpg">
-      <div class="bus-info">
-        <h3>Neolan N316</h3>
-        <h5>червоний</h5>
-      </div>
-    </a>
-
-    <a href="neolplanwhite.html" class="bus-card">
-      <img src="img/5269672762366693829.jpg">
-      <div class="bus-info">
-        <h3>Neolan N316</h3>
-        <h5>білий</h5>
-      </div>
-    </a>
-
-    <a href="bova.html" class="bus-card">
-      <img src="img/bova.jpg">
-      <div class="bus-info">
-        <h3>Bova</h3>
-        <h5>коричнева</h5>
-      </div>
-    </a>
-
-    <a href="eos.html" class="bus-card">
-      <img src="img/eos.jpg">
-      <div class="bus-info">
-        <h3>Eos e-200</h3>
-        <h5>білий</h5>
-      </div>
-    </a>
-
-  </div>
-</section>
-
-<!-- How we work -->
-<section class="how-we-work">
-  <h2>Як з нами працювати</h2>
-
-  <div class="steps">
-    <div class="step"><h3>Вибираєте автобус</h3></div>
-    <div class="step"><h3>Телефонуйте менеджеру</h3></div>
-    <div class="step"><h3>Бронюєте квиток</h3></div>
-    <div class="step"><h3>Подаємо транспорт</h3></div>
-  </div>
-</section>
-
-<!-- Why choose us -->
-<section class="why-choose-us">
-  <div class="content">
-    <h2>Чому вибирають нас?</h2>
-    <div class="reasons-grid">
-
-      <div class="reason">
-        <div class="reason-text">
-          <h3>Партнерство</h3>
-          <p>Ми можемо працювати на постійній основі…</p>
+  <!-- HEADER -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="brand-logo" aria-hidden="true">🚌</div>
+        <div class="brand-text">
+          <div class="brand-name">Dieller Bus</div>
+          <div class="brand-sub">Луцьк — Пулави</div>
         </div>
       </div>
 
-      <div class="reason">
-        <div class="reason-text">
-          <h3>Доступні ціни</h3>
-          <p>Недорого взяти квиток…</p>
-        </div>
-      </div>
+      <nav class="main-nav" role="navigation" aria-label="Головне меню">
+        <a href="index.html">Головна</a>
+        <a href="nashbusindex.html" class="active">Наші автобуси</a>
+        <a href="kvitokindex.html">Квитки</a>
+        <a href="registerindex.html">Реєстрація</a>
+      </nav>
 
-      <div class="reason">
-        <div class="reason-text">
-          <h3>Комфорт</h3>
-          <p>Автобуси обладнані…</p>
-        </div>
-      </div>
-
+      <a class="phone-cta" href="tel:+380501763030">050 176 30 30</a>
     </div>
-  </div>
-</section>
+  </header>
+
+  <!-- BANNER -->
+  <section class="banner" role="region" aria-label="Банер">
+    <div class="container banner-inner">
+      <h1 class="hero-title">Dieller Bus — перевезення Луцьк ↔ Пулави</h1>
+      <p class="hero-sub">Пасажирські перевезення по Україні та Польщі. Замовлення під ключ.</p>
+      <a href="#catalog" class="btn-primary">Переглянути каталог</a>
+    </div>
+  </section>
+
+  <main class="container">
+
+    <!-- CATALOG -->
+    <section id="catalog" class="catalog-section" aria-label="Каталог автобусів">
+      <h2 class="section-title">Каталог автобусів</h2>
+
+      <div class="bus-grid">
+
+        <!-- ******** BUS 1 ******** -->
+        <article class="bus-card" aria-labelledby="bus-1-title">
+          <div class="bus-media">
+            <!-- placeholder block (рівна плашка замість фото) -->
+            <div class="placeholder"></div>
+          </div>
+          <div class="bus-body">
+            <h3 id="bus-1-title">Mercedes O404</h3>
+            <p class="bus-meta">темно-синій</p>
+            <a class="bus-link" href="mercedes2.html">Детальніше</a>
+          </div>
+        </article>
+
+        <!-- ******** BUS 2 ******** -->
+        <article class="bus-card" aria-labelledby="bus-2-title">
+          <div class="bus-media">
+            <div class="placeholder"></div>
+          </div>
+          <div class="bus-body">
+            <h3 id="bus-2-title">Neolan N316</h3>
+            <p class="bus-meta">червоний</p>
+            <a class="bus-link" href="Neoplanred.html">Детальніше</a>
+          </div>
+        </article>
+
+        <!-- ******** BUS 3 ******** -->
+        <article class="bus-card" aria-labelledby="bus-3-title">
+          <div class="bus-media">
+            <div class="placeholder"></div>
+          </div>
+          <div class="bus-body">
+            <h3 id="bus-3-title">Neolan N316</h3>
+            <p class="bus-meta">білий</p>
+            <a class="bus-link" href="neolplanwhite.html">Детальніше</a>
+          </div>
+        </article>
+
+        <!-- ******** BUS 4 ******** -->
+        <article class="bus-card" aria-labelledby="bus-4-title">
+          <div class="bus-media">
+            <div class="placeholder"></div>
+          </div>
+          <div class="bus-body">
+            <h3 id="bus-4-title">Bova</h3>
+            <p class="bus-meta">коричнева</p>
+            <a class="bus-link" href="bova.html">Детальніше</a>
+          </div>
+        </article>
+
+        <!-- ******** BUS 5 ******** -->
+        <article class="bus-card" aria-labelledby="bus-5-title">
+          <div class="bus-media">
+            <div class="placeholder"></div>
+          </div>
+          <div class="bus-body">
+            <h3 id="bus-5-title">Eos e-200</h3>
+            <p class="bus-meta">білий</p>
+            <a class="bus-link" href="eos.html">Детальніше</a>
+          </div>
+        </article>
+
+      </div> <!-- /.bus-grid -->
+    </section> <!-- /.catalog-section -->
+
+    <!-- HOW WE WORK -->
+    <section class="how-section" aria-label="Як з нами працювати">
+      <h2 class="section-title">Як з нами працювати</h2>
+
+      <div class="steps-grid">
+        <div class="step">
+          <div class="step-icon">1</div>
+          <div class="step-title">Вибираєте автобус</div>
+        </div>
+        <div class="step">
+          <div class="step-icon">2</div>
+          <div class="step-title">Телефонуєте менеджеру</div>
+        </div>
+        <div class="step">
+          <div class="step-icon">3</div>
+          <div class="step-title">Бронюєте квиток</div>
+        </div>
+        <div class="step">
+          <div class="step-icon">4</div>
+          <div class="step-title">Подаємо транспорт</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="why-section" aria-label="Чому вибирають нас">
+      <h2 class="section-title">Чому вибирають нас?</h2>
+
+      <div class="reasons">
+        <div class="reason">
+          <div class="reason-icon">🤝</div>
+          <div class="reason-text">
+            <h3>Партнерство</h3>
+            <p>Організація перевезень з усією документацією — ліцензії, страховки.</p>
+          </div>
+        </div>
+
+        <div class="reason">
+          <div class="reason-icon">💰</div>
+          <div class="reason-text">
+            <h3>Доступні ціни</h3>
+            <p>Прозорі тарифи для регулярних ліній та замовлень.</p>
+          </div>
+        </div>
+
+        <div class="reason">
+          <div class="reason-icon">✔️</div>
+          <div class="reason-text">
+            <h3>Комфорт</h3>
+            <p>Комфортні крісла, кондиціонер, чистота.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER (текст знизу) -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>© Dieller Bus — Луцьк ↔️ Пулави. Тел: 050 176 30 30. Довеземо з комфортом.</p>
+    </div>
+  </footer>
 
 </body>
 </html>
