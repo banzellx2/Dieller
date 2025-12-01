@@ -10,11 +10,10 @@
     z-index: 1;
 
 }
-/* нормальна таблиця під пошуком */
 .price-table {
     width: 100%;
     max-width: 900px;
-    margin: 120px auto 60px; /* не лізе під банер */
+    margin: 120px auto 60px;
     background: white;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.15);
